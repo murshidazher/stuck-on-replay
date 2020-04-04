@@ -1,7 +1,7 @@
 import React, { Component } from "react";
+import { Link } from "react-router-dom";
 import Table from "./common/table";
 import Like from "./common/like";
-import { Link } from "react-router-dom";
 
 class MoviesTable extends Component {
   columns = [
@@ -36,12 +36,13 @@ class MoviesTable extends Component {
 
   render() {
     const { movies, onSort, sortColumn } = this.props;
+
     return (
       <Table
         columns={this.columns}
         data={movies}
-        onSort={onSort}
         sortColumn={sortColumn}
+        onSort={onSort}
       />
     );
   }
